@@ -1,0 +1,106 @@
+================================================================
+HANDOFF.txt  -  gershonAI
+Written by: Claude (Anthropic) - token-limit handoff protocol
+Date: 2026-09-09
+================================================================
+
+0. WHO YOU ARE READING THIS
+----------------------------------------------------------------
+You are an AI assistant taking over work on this repository for
+Olivier Attia, founder / CTO of Gershon Consulting LLC.
+
+Read the MASTER HANDOFF first:
+  github.com/gershonconsulting/memory -> HANDOFF.txt
+
+CRITICAL OPERATING RULES - do not break these:
+  * Olivier does NOT use a terminal, CLI, git or PowerShell. NEVER
+    give him commands, scripts, .bat files or 'just run this' steps.
+  * He does NOT upload, download, move or save files, and does not
+    click buttons an AI injected. If a file has to get somewhere,
+    YOU find the route and execute it.
+  * End every actionable reply with:
+      GREEN CHECK = ready for him to test (+ the link)
+      RED CROSS   = something still to do (+ exactly 3 options he
+                    can actually action - never a CLI step)
+  * Executors: Ariel = code and repo work. Charles = Chrome extension
+    and web admin panels. BOTH ARE AI, NOT HUMANS.
+
+1. WHAT THIS REPO IS - READ THIS CAREFULLY, TWO THINGS SHARE A NAME
+----------------------------------------------------------------
+THIS REPO backs gershon.ai, which is ONLY A HUB PAGE - a set of links
+to all the other Gershon platforms. It has NO product logic.
+
+ai.gershon.ai is a DIFFERENT thing: the actual product being built, a
+copy-cat of Swan (agent.getswan.com) but better. Do not confuse them,
+and do not build product features into this repo.
+
+Benchmark note: the Swan product to compare against is
+agent.getswan.com. askswan.com is a PARKED DOMAIN, not the product -
+do not analyse it.
+
+All gershon.ai and ai.gershon.ai work belongs in the claude.ai
+project named 'ai.gershon.ai'.
+
+2. STACK AND DEPLOY ROUTE
+----------------------------------------------------------------
+This repo (gershon.ai hub): static HTML.
+Default branch: main
+
+The ai.gershon.ai PRODUCT (not in this repo):
+  Next.js 14, TypeScript, Tailwind, Supabase/Prisma,
+  NextAuth with LinkedIn OAuth ONLY, Vercel, Stripe, Anthropic API.
+  NOTE A CONFLICT: the standing portfolio default explicitly says NO
+  Vercel for new projects (Hostinger is the default, Cloudflare for
+  DNS/CDN). This product's recorded stack says Vercel. Confirm with
+  Olivier which one wins before deploying anything.
+
+3. RECENTLY DONE  [DONE]
+----------------------------------------------------------------
+- 19-screen UI catalog completed.
+- Full Claude Code handoff document completed.
+- Product definition settled: three pillars PROMOTE / NETWORK /
+  ENGAGE; an AI onboarding agent named Gershon that is conversational
+  with no forms; pricing Free / Lite $199 / Plus $499 / Pro $999
+  per month.
+
+4. PENDING  [TODO]
+----------------------------------------------------------------
+- The ai.gershon.ai product is roughly 15% built.
+- Checkpoint CP-GAI-001 is BLOCKED: ai.gershon.ai has no separate app
+  deployed, so there is nothing for its DNS checkpoint to point at.
+  Building the app is what unblocks it - not a DNS change.
+
+5. MISSING / NOT BUILT YET
+----------------------------------------------------------------
+- 85% of the ai.gershon.ai product.
+- Resolve the Vercel-vs-standing-default question above.
+
+6. KNOWN BUGS / NEEDS FIXING
+----------------------------------------------------------------
+- None recorded for the hub page.
+
+7. NEXT ACTION - START HERE
+----------------------------------------------------------------
+  -> Confirm with Olivier whether ai.gershon.ai ships on Vercel or on
+     the standing Hostinger/Cloudflare stack. That answer decides how
+     the remaining 85% gets built, so it is worth asking before
+     writing code.
+
+8. GOTCHAS / HARD-WON LESSONS
+----------------------------------------------------------------
+- gershon.ai (hub, this repo) vs ai.gershon.ai (product, elsewhere) is
+  the single most common confusion on this project. Check which one a
+  request means before touching anything.
+- askswan.com is parked. agent.getswan.com is the real benchmark.
+- Writes to this repo go through the GitHub web UI in Chrome; `git
+  push` is proxy-refused and the API 403s on write. Verify every
+  commit by reading raw.githubusercontent.com.
+
+9. CONTACT / ESCALATION
+----------------------------------------------------------------
+Olivier Attia - oattia@gmail.com
+Report mailbox - report@gershonconsulting.com
+
+================================================================
+END OF HANDOFF
+================================================================
