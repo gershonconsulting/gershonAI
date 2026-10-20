@@ -1,0 +1,267 @@
+diff --git a/index.html b/index.html
+index 668161c..bdbf192 100644
+--- a/index.html
++++ b/index.html
+@@ -216,12 +216,12 @@
+   <div class="hero-grid">
+     <div>
+       <div class="hero-eyebrow">Platform index · Spring 2026</div>
+-      <h1>One hub.<br />Twenty-one platforms.<br /><em>Every lever pulled.</em></h1>
++      <h1>One hub.<br />Twenty-four platforms.<br /><em>Every lever pulled.</em></h1>
+     </div>
+     <div class="hero-side">
+       <p>The operating stack behind Gershon Consulting — a connected suite of proprietary tools for outbound sales, market entry, and client delivery. Each platform is a door.</p>
+       <div class="hero-stats">
+-        <div class="stat"><div class="num">07</div><div class="lbl">CRM modules</div></div>
++        <div class="stat"><div class="num">14</div><div class="lbl">CRM modules</div></div>
+         <div class="stat"><div class="num">04</div><div class="lbl">Ventures</div></div>
+         <div class="stat"><div class="num"><em>11</em></div><div class="lbl">Live domains</div></div>
+       </div>
+@@ -231,12 +231,12 @@
+ 
+ <div class="section-head">
+   <h2><span class="idx">§ 01</span>CRM Suite</h2>
+-  <p class="sub">The Gershon operating system — eleven interconnected modules powering every prospect, campaign, and client engagement.</p>
++  <p class="sub">The Gershon operating system — fourteen interconnected modules powering every prospect, campaign, and client engagement.</p>
+ </div>
+ 
+ <section class="grid crm">
+ 
+-  <a class="tile" href="https://crm.gershonCRM.com" target="_blank" rel="noopener">
++  <div class="tile next" aria-disabled="true">
+     <div class="tile-top">
+       <div class="icon-wrap">
+         <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+@@ -246,15 +246,15 @@
+           <circle cx="10" cy="12" r="3"/>
+         </svg>
+       </div>
+-      <div class="tile-num">01 / 11</div>
++      <div class="tile-num">01 / 14</div>
+     </div>
+     <div class="tile-body">
+       <h3>CRM</h3>
+       <span class="url">crm.gershonCRM.com</span>
+       <p>The core — contacts, pipelines, conversations, and deal flow. Where every relationship lives.</p>
+     </div>
+-    <div class="tile-foot"><span class="badge live">● Live</span><span class="arrow">↗</span></div>
+-  </a>
++    <div class="tile-foot"><span class="badge">○ Coming soon</span></div>
++  </div>
+ 
+   <a class="tile" href="https://pulse.gershonCRM.com" target="_blank" rel="noopener">
+     <div class="tile-top">
+@@ -263,7 +263,7 @@
+           <path d="M4 24 L14 24 L18 14 L24 34 L30 18 L34 24 L44 24"/>
+         </svg>
+       </div>
+-      <div class="tile-num">02 / 11</div>
++      <div class="tile-num">02 / 14</div>
+     </div>
+     <div class="tile-body">
+       <h3>Pulse</h3>
+@@ -286,7 +286,7 @@
+           <line x1="27" y1="32" x2="35" y2="32"/>
+         </svg>
+       </div>
+-      <div class="tile-num">03 / 11</div>
++      <div class="tile-num">03 / 14</div>
+     </div>
+     <div class="tile-body">
+       <h3>Company</h3>
+@@ -296,7 +296,7 @@
+     <div class="tile-foot"><span class="badge beta">● Beta</span><span class="arrow">↗</span></div>
+   </a>
+ 
+-  <a class="tile" href="https://social.gershonCRM.com" target="_blank" rel="noopener">
++  <a class="tile" href="https://social.gershon.ai" target="_blank" rel="noopener">
+     <div class="tile-top">
+       <div class="icon-wrap">
+         <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+@@ -309,11 +309,11 @@
+           <line x1="6" y1="42" x2="42" y2="42"/>
+         </svg>
+       </div>
+-      <div class="tile-num">04 / 11</div>
++      <div class="tile-num">04 / 14</div>
+     </div>
+     <div class="tile-body">
+       <h3>Social</h3>
+-      <span class="url">social.gershonCRM.com</span>
++      <span class="url">social.gershon.ai</span>
+       <p>LinkedIn analytics and social performance — editorial dashboards tracking reach, engagement, and inbound signal.</p>
+     </div>
+     <div class="tile-foot"><span class="badge live">● Live</span><span class="arrow">↗</span></div>
+@@ -329,7 +329,7 @@
+           <line x1="13" y1="18" x2="17" y2="18"/>
+         </svg>
+       </div>
+-      <div class="tile-num">05 / 11</div>
++      <div class="tile-num">05 / 14</div>
+     </div>
+     <div class="tile-body">
+       <h3>Finance</h3>
+@@ -339,7 +339,7 @@
+     <div class="tile-foot"><span class="badge build">● Build</span><span class="arrow">↗</span></div>
+   </a>
+ 
+-  <a class="tile" href="https://task.gershonCRM.com" target="_blank" rel="noopener">
++  <a class="tile" href="https://task.gershon.ai" target="_blank" rel="noopener">
+     <div class="tile-top">
+       <div class="icon-wrap">
+         <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+@@ -349,11 +349,11 @@
+           <line x1="16" y1="36" x2="28" y2="36"/>
+         </svg>
+       </div>
+-      <div class="tile-num">06 / 11</div>
++      <div class="tile-num">06 / 14</div>
+     </div>
+     <div class="tile-body">
+       <h3>Task</h3>
+-      <span class="url">task.gershonCRM.com</span>
++      <span class="url">task.gershon.ai</span>
+       <p>Operational task layer for Naomie Jordan and the team. Daily briefings, campaign assignments, autonomous flows.</p>
+     </div>
+     <div class="tile-foot"><span class="badge build">● Build</span><span class="arrow">↗</span></div>
+@@ -369,7 +369,7 @@
+           <line x1="16" y1="31" x2="27" y2="31"/>
+         </svg>
+       </div>
+-      <div class="tile-num">07 / 11</div>
++      <div class="tile-num">07 / 14</div>
+     </div>
+     <div class="tile-body">
+       <h3>Onboarding AI Form</h3>
+@@ -389,7 +389,7 @@
+           <line x1="24" y1="24" x2="36" y2="14"/>
+         </svg>
+       </div>
+-      <div class="tile-num">08 / 11</div>
++      <div class="tile-num">08 / 14</div>
+     </div>
+     <div class="tile-body">
+       <h3>Radar</h3>
+@@ -399,7 +399,7 @@
+     <div class="tile-foot"><span class="badge beta">● Beta</span><span class="arrow">↗</span></div>
+   </a>
+ 
+-  <a class="tile" href="https://TalkingPoint.gershonCRM.com" target="_blank" rel="noopener">
++  <div class="tile next" aria-disabled="true">
+     <div class="tile-top">
+       <div class="icon-wrap">
+         <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+@@ -409,18 +409,18 @@
+           <circle cx="31" cy="23" r="1.5" fill="currentColor"/>
+         </svg>
+       </div>
+-      <div class="tile-num">09 / 11</div>
++      <div class="tile-num">09 / 14</div>
+     </div>
+     <div class="tile-body">
+       <h3>TalkingPoint</h3>
+-      <span class="url">TalkingPoint.gershonCRM.com</span>
++      <span class="url">talkingpoints.gershon.ai</span>
+       <p>AI-assisted talking points and messaging guidance for sharper client and prospect conversations.</p>
+     </div>
+-    <div class="tile-foot"><span class="badge build">● Build</span><span class="arrow">↗</span></div>
+-  </a>
++    <div class="tile-foot"><span class="badge">○ Coming soon</span></div>
++  </div>
+ 
+ 
+-  <a class="tile" href="https://expenses.gershonCRM.com" target="_blank" rel="noopener">
++  <a class="tile" href="https://expenses.gershon.ai" target="_blank" rel="noopener">
+     <div class="tile-top">
+       <div class="icon-wrap">
+         <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+@@ -430,11 +430,11 @@
+           <line x1="18" y1="32" x2="26" y2="32"></line>
+         </svg>
+       </div>
+-      <div class="tile-num">10 / 11</div>
++      <div class="tile-num">10 / 14</div>
+     </div>
+     <div class="tile-body">
+       <h3>Expenses</h3>
+-      <span class="url">expenses.gershonCRM.com</span>
++      <span class="url">expenses.gershon.ai</span>
+       <p>Spend tracking and receipt capture that keeps every engagement cost accounted for and audit-ready.</p>
+     </div>
+     <div class="tile-foot"><span class="badge build">● Build</span><span class="arrow">↗</span></div>
+@@ -450,7 +450,7 @@
+           <circle cx="30" cy="32" r="4"></circle>
+         </svg>
+       </div>
+-      <div class="tile-num">11 / 11</div>
++      <div class="tile-num">11 / 14</div>
+     </div>
+     <div class="tile-body">
+       <h3>Tools</h3>
+@@ -459,6 +459,66 @@
+     </div>
+     <div class="tile-foot"><span class="badge live">● Live</span><span class="arrow">↗</span></div>
+   </a>
++
++  <a class="tile" href="https://sales.gershon.ai" target="_blank" rel="noopener">
++    <div class="tile-top">
++      <div class="icon-wrap">
++        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
++          <polyline points="8,34 18,24 26,30 40,14"/>
++          <polyline points="32,14 40,14 40,22"/>
++          <line x1="8" y1="40" x2="40" y2="40"/>
++        </svg>
++      </div>
++      <div class="tile-num">12 / 14</div>
++    </div>
++    <div class="tile-body">
++      <h3>Sales</h3>
++      <span class="url">sales.gershon.ai</span>
++      <p>Sales follow-up copilot connected to Streak — surfaces every deal that needs a nudge and drafts the next touch.</p>
++    </div>
++    <div class="tile-foot"><span class="badge new">● New</span><span class="arrow">↗</span></div>
++  </a>
++
++  <a class="tile" href="https://events.gershon.ai" target="_blank" rel="noopener">
++    <div class="tile-top">
++      <div class="icon-wrap">
++        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
++          <rect x="8" y="12" width="32" height="28" rx="1"/>
++          <line x1="8" y1="20" x2="40" y2="20"/>
++          <line x1="16" y1="8" x2="16" y2="15"/>
++          <line x1="32" y1="8" x2="32" y2="15"/>
++          <polyline points="18,30 22,34 30,26"/>
++        </svg>
++      </div>
++      <div class="tile-num">13 / 14</div>
++    </div>
++    <div class="tile-body">
++      <h3>Events</h3>
++      <span class="url">events.gershon.ai</span>
++      <p>From client ICP to graded US events — and the exhibitor leads with CEO contacts worth meeting there.</p>
++    </div>
++    <div class="tile-foot"><span class="badge new">● New</span><span class="arrow">↗</span></div>
++  </a>
++
++  <a class="tile" href="https://client.gershonCRM.com" target="_blank" rel="noopener">
++    <div class="tile-top">
++      <div class="icon-wrap">
++        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
++          <rect x="8" y="10" width="32" height="24" rx="1"/>
++          <line x1="18" y1="40" x2="30" y2="40"/>
++          <line x1="24" y1="34" x2="24" y2="40"/>
++          <polyline points="14,28 20,22 25,25 34,16"/>
++        </svg>
++      </div>
++      <div class="tile-num">14 / 14</div>
++    </div>
++    <div class="tile-body">
++      <h3>Client</h3>
++      <span class="url">client.gershonCRM.com</span>
++      <p>The client portal — live dashboards and monthly reports for every engagement, in one place.</p>
++    </div>
++    <div class="tile-foot"><span class="badge live">● Live</span><span class="arrow">↗</span></div>
++  </a>
+ </section>
+ 
+ <div class="section-head">
