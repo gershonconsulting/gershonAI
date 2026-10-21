@@ -1,7 +1,7 @@
 ================================================================
 HANDOFF.txt  -  gershonAI
 Written by: Claude (Anthropic) - token-limit handoff protocol
-Date: 2026-09-09
+Date: 2026-09-09 (updated 2026-10-20 nightly)
 ================================================================
 
 0. WHO YOU ARE READING THIS
@@ -56,6 +56,15 @@ The ai.gershon.ai PRODUCT (not in this repo):
 
 3. RECENTLY DONE  [DONE]
 ----------------------------------------------------------------
+- [2026-10-20 nightly] Hub link refresh PREPARED on branch
+  nightly/2026-10-20-hub-links (PR to main, NOT merged):
+  social/task/expenses -> *.gershon.ai; new tiles Sales
+  (sales.gershon.ai), Events (events.gershon.ai), Client
+  (client.gershonCRM.com); dead crm.gershonCRM.com and
+  TalkingPoint.gershonCRM.com turned into unlinked "Coming soon"
+  tiles (TalkingPoint now shows talkingpoints.gershon.ai).
+  Counts updated (14 CRM modules, 24 platforms). Rendered and
+  checked in Chromium (desktop + phone width, no errors).
 - 19-screen UI catalog completed.
 - Full Claude Code handoff document completed.
 - Product definition settled: three pillars PROMOTE / NETWORK /
@@ -65,6 +74,20 @@ The ai.gershon.ai PRODUCT (not in this repo):
 
 4. PENDING  [TODO]
 ----------------------------------------------------------------
+- [2026-10-21] DONE on branch nightly/2026-10-21-hub-links (PR to
+  main, NOT merged): hub links refresh applied to index.html AND the
+  logo is now inlined as a compressed 8-bit PNG (15KB, 680px, 64 colours, instead of
+  178KB, visually identical; the header wordmark copies it via a one-line script) so index.html is ~55KB instead of 505KB
+  and fits the GitHub API route. Supersedes draft PR #1 / branch
+  nightly/2026-10-20-hub-links (patch file only).
+  Still no branch preview: the gershon-ai Pages project is
+  direct-upload. Going live = merge + publish (Charles), or connect
+  the gershon-ai Pages project to GitHub so main auto-deploys.
+- client.gershon.ai DNS pending -> switch Client tile from
+  client.gershonCRM.com once it resolves.
+- talkingpoints.gershon.ai and crm.* not live -> re-link when live.
+- dash.gershonCRM.com and report.gershonCRM.com are live (200) but
+  not on the hub - decide whether they get tiles.
 - The ai.gershon.ai product is roughly 15% built.
 - Checkpoint CP-GAI-001 is BLOCKED: ai.gershon.ai has no separate app
   deployed, so there is nothing for its DNS checkpoint to point at.
