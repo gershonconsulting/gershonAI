@@ -1,7 +1,7 @@
 ================================================================
 HANDOFF.txt  -  gershonAI
 Written by: Claude (Anthropic) - token-limit handoff protocol
-Date: 2026-09-09 (updated 2026-10-20 nightly)
+Date: 2026-09-09 (updated 2026-10-22 nightly)
 ================================================================
 
 0. WHO YOU ARE READING THIS
@@ -56,6 +56,26 @@ The ai.gershon.ai PRODUCT (not in this repo):
 
 3. RECENTLY DONE  [DONE]
 ----------------------------------------------------------------
+- [2026-10-22 nightly] Branch nightly/2026-10-22-hub-tiles (PR to
+  main, NOT merged), hub v1.2:
+  * Dead external tiles NeroPulse (parked at TierraNet), EnricherPro
+    and QRNetworking (both 302 to expired *.sandbox.novita.ai) are now
+    unlinked "Coming soon" tiles (same style as CRM / TalkingPoint).
+  * LatinPuente.com (NXDOMAIN) -> "Puente Latin", https://puentelatin.com (200), Live.
+  * Linalysis tile: linalysis.com (connection reset) -> https://linalysis.net
+    (200). The separate "Linalysis Network" tile (also linalysis.net)
+    was folded into it, so there is one Linalysis tile.
+  * Finance: Pennylane -> Xero wording (the live landing page says
+    "Your Xero ledger, turned into decisions"), badge Build -> Live.
+  * Pulse copy = LinkedIn/Sales Navigator inbox triage Red/Orange/Green.
+    Radar copy = warm intros, Sources > Bridges > Prospects.
+  * New ICP tile (https://icp.gershon.ai, 200), CRM 15/15.
+  * Counts: 24 tiles (15 CRM + 9 external), 19 clickable live links,
+    5 "Coming soon". Stats now 15 CRM modules / 19 live domains.
+  * Every remaining link checked with curl 2026-10-22: all 200 or
+    3xx -> 200.
+- [2026-10-21] PR #2 merged to main (hub links refresh, 54KB page) but
+  NEVER PUBLISHED: gershon.ai still serves the old 504KB page.
 - [2026-10-20 nightly] Hub link refresh PREPARED on branch
   nightly/2026-10-20-hub-links (PR to main, NOT merged):
   social/task/expenses -> *.gershon.ai; new tiles Sales
@@ -100,10 +120,20 @@ The ai.gershon.ai PRODUCT (not in this repo):
 
 6. KNOWN BUGS / NEEDS FIXING
 ----------------------------------------------------------------
-- None recorded for the hub page.
+- "04 Ventures" stat is not tied to any tile count (left as is).
+- Dash (dash.gershoncrm.com) and Report (report.gershoncrm.com) are
+  live but have no tile - open decision for Olivier.
+- crm.gershonCRM.com and roi.gershonCRM.com are dangling CNAMEs to
+  missing pages.dev projects (takeover risk) - Charles, DNS.
 
 7. NEXT ACTION - START HERE
 ----------------------------------------------------------------
+  -> GOING LIVE: merge the 2026-10-22 hub-tiles PR, then PUBLISH
+     index.html to the Cloudflare Pages project "gershon-ai" (direct
+     upload, not Git-connected). The Cloudflare connector is
+     disconnected, so this needs Charles (Cloudflare dashboard upload)
+     or a reconnected Cloudflare connector. Better: connect the
+     gershon-ai Pages project to this GitHub repo so main auto-deploys.
   -> Confirm with Olivier whether ai.gershon.ai ships on Vercel or on
      the standing Hostinger/Cloudflare stack. That answer decides how
      the remaining 85% gets built, so it is worth asking before
@@ -115,9 +145,10 @@ The ai.gershon.ai PRODUCT (not in this repo):
   the single most common confusion on this project. Check which one a
   request means before touching anything.
 - askswan.com is parked. agent.getswan.com is the real benchmark.
-- Writes to this repo go through the GitHub web UI in Chrome; `git
-  push` is proxy-refused and the API 403s on write. Verify every
-  commit by reading raw.githubusercontent.com.
+- Writes to this repo go through the GitHub MCP connector
+  (create_branch / push_files / create_pull_request) or the GitHub
+  web UI; plain `git push` from the cloud box is proxy-refused.
+  Verify every commit by re-fetching the branch and diffing.
 
 9. CONTACT / ESCALATION
 ----------------------------------------------------------------
