@@ -1,7 +1,7 @@
 ================================================================
 HANDOFF.txt  -  gershonAI
 Written by: Claude (Anthropic) - token-limit handoff protocol
-Date: 2026-09-09 (updated 2026-10-22 nightly)
+Date: 2026-09-09 (updated 2026-10-23 nightly)
 ================================================================
 
 0. WHO YOU ARE READING THIS
@@ -56,6 +56,28 @@ The ai.gershon.ai PRODUCT (not in this repo):
 
 3. RECENTLY DONE  [DONE]
 ----------------------------------------------------------------
+- [2026-10-23 nightly] Same branch nightly/2026-10-22-hub-tiles (PR #3),
+  hub v1.2 -> v1.2.1 (version label in the top bar):
+  [OK] Re-checked every tile link with curl on 2026-10-23: all 19
+       clickable tiles answer 200 (company/task/events/expenses go to
+       their sign-in page; expenses + tools only loop on a HEAD request,
+       a normal browser GET gives 200). No link change was needed.
+  [OK] Still "Coming soon" (still dead tonight): CRM (crm.gershoncrm.com
+       no answer), TalkingPoint (talkingpoints.gershon.ai no answer,
+       talkingpoint.gershoncrm.com no DNS), NeroPulse (TierraNet parked
+       page), EnricherPro + QRNetworking (302 to expired
+       sandbox.novita.ai).
+  [OK] Puente Latin real domain confirmed from the puentelatin-website
+       repo (.env.example, PUBLISHING.md): https://puentelatin.com (200).
+  [X]  NOT PUBLISHED: gershon.ai still serves the old page until PR #3 is
+       merged and index.html is uploaded to Cloudflare Pages "gershon-ai".
+  [X]  www.gershonconsulting.com (WordPress) still links to dead domains:
+       Home page "Our own ventures, from the same team." cards (Latin
+       Puente, Linalysis, NeroPulse, EnricherPro, QR Networking), Home
+       footer "Our brands" (Latin Puente, QR Networking, EnricherPro),
+       /projects/ "My Projects" logo grid (Linalysis (OLD) ->
+       linalysis.com, EnricherPro -> www.enricherpro.com). Needs a
+       WordPress edit (Charles).
 - [2026-10-22 nightly] Branch nightly/2026-10-22-hub-tiles (PR to
   main, NOT merged), hub v1.2:
   * Dead external tiles NeroPulse (parked at TierraNet), EnricherPro
