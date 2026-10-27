@@ -1,7 +1,7 @@
 ================================================================
 HANDOFF.txt  -  gershonAI
 Written by: Claude (Anthropic) - token-limit handoff protocol
-Date: 2026-09-09 (updated 2026-10-23 nightly)
+Date: 2026-09-09 (updated 2026-10-27 nightly)
 ================================================================
 
 0. WHO YOU ARE READING THIS
@@ -56,6 +56,20 @@ The ai.gershon.ai PRODUCT (not in this repo):
 
 3. RECENTLY DONE  [DONE]
 ----------------------------------------------------------------
+  2026-10-27 nightly, PR #3 branch, hub v1.2.1 -> v1.3:
+  * Talking Points tile is now a LIVE link to https://talkingpoints.gershon.ai
+    (200, "Talking Points by Gershon Consulting"). The old
+    talkingpoint.gershoncrm.com does not resolve.
+  * Hero counters are computed from the tiles by a small inline script
+    (static fallbacks are correct too): 15 CRM modules, 09 External
+    platforms (replaces the stale "04 Ventures"), 20 live domains
+    (= 20 clickable tiles, all https 200 or 3xx->200 on 2026-10-27),
+    headline "Twenty-four platforms" = 15 + 9 tiles.
+  * Coming soon (non-link): CRM (crm.gershoncrm.com NXDOMAIN),
+    NeroPulse (parked at TierraNet), EnricherPro and QR Networking
+    (redirect to dead sandbox.novita.ai URLs).
+  * Eyebrow "Spring 2026" -> "Fall 2026". Dash/report tiles left out on
+    purpose (Olivier decision pending).
 - [2026-10-23 nightly] Same branch nightly/2026-10-22-hub-tiles (PR #3),
   hub v1.2 -> v1.2.1 (version label in the top bar):
   [OK] Re-checked every tile link with curl on 2026-10-23: all 19
@@ -127,7 +141,8 @@ The ai.gershon.ai PRODUCT (not in this repo):
   the gershon-ai Pages project to GitHub so main auto-deploys.
 - client.gershon.ai DNS pending -> switch Client tile from
   client.gershonCRM.com once it resolves.
-- talkingpoints.gershon.ai and crm.* not live -> re-link when live.
+- crm.* not live -> re-link when live (talkingpoints.gershon.ai is
+  live since 2026-10-27 and linked in v1.3).
 - dash.gershonCRM.com and report.gershonCRM.com are live (200) but
   not on the hub - decide whether they get tiles.
 - The ai.gershon.ai product is roughly 15% built.
@@ -142,7 +157,6 @@ The ai.gershon.ai PRODUCT (not in this repo):
 
 6. KNOWN BUGS / NEEDS FIXING
 ----------------------------------------------------------------
-- "04 Ventures" stat is not tied to any tile count (left as is).
 - Dash (dash.gershoncrm.com) and Report (report.gershoncrm.com) are
   live but have no tile - open decision for Olivier.
 - crm.gershonCRM.com and roi.gershonCRM.com are dangling CNAMEs to
