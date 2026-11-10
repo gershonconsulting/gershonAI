@@ -1,7 +1,7 @@
 ================================================================
 HANDOFF.txt  -  gershonAI
 Written by: Claude (Anthropic) - token-limit handoff protocol
-Date: 2026-09-09 (updated 2026-10-27 nightly)
+Date: 2026-09-09 (updated 2026-11-07 nightly)
 ================================================================
 
 0. WHO YOU ARE READING THIS
@@ -56,6 +56,26 @@ The ai.gershon.ai PRODUCT (not in this repo):
 
 3. RECENTLY DONE  [DONE]
 ----------------------------------------------------------------
+  2026-11-07 nightly, branch nightly/2026-11-07-hub (PR stacked on
+  PR #4 branch nightly/2026-10-29-hub-internal), hub v1.4 -> v1.5:
+  * Tonight's live audit of gershon.ai (still the OLD page, nothing
+    published) flagged TalkingPoint/CRM/EnricherPro/QRNetworking/
+    LatinPuente/NeroPulse. PRs #3/#4 already fix all tile links:
+    Talking Points -> talkingpoints.gershon.ai (200), Puente Latin ->
+    puentelatin.com (200), CRM/NeroPulse/EnricherPro/QR Networking =
+    greyed "Coming soon" non-links. Re-checked: still dead/parked.
+  * This PR: static fallback numbers now match the 18 tiles on the
+    page (headline "Eighteen platforms", 09 CRM, 09 external, 14 live
+    links; the inline script still recomputes them). Eyebrow
+    "Fall 2026" -> "2026". Version v 1.5 in the top bar AND footer
+    of index.html and internal.html.
+  * Checked 2026-11-07 with curl: all 20 linked tiles (14 hub + 6
+    /internal) answer 200 except welcome.gershon.ai, which the cloud
+    proxy blocks (unverifiable from cloud, not known dead).
+    Playwright 1280 + 390 px: no horizontal overflow, no JS errors.
+  [X] Still NOT PUBLISHED: merge #4 then this PR, then upload
+      index.html + internal.html to Cloudflare Pages "gershon-ai".
+
   2026-10-27 nightly, PR #3 branch, hub v1.2.1 -> v1.3:
   * Talking Points tile is now a LIVE link to https://talkingpoints.gershon.ai
     (200, "Talking Points by Gershon Consulting"). The old
