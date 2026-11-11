@@ -56,6 +56,11 @@ The ai.gershon.ai PRODUCT (not in this repo):
 
 3. RECENTLY DONE  [DONE]
 ----------------------------------------------------------------
+  ✅ 2026-11-11 nightly, branch nightly/2026-11-11-hub-brand-red, hub v1.5 -> v1.5.1:
+     brand red switched #CC3333 -> #FE1B04 (dark #d11200, tint #fff5f5) in
+     index.html + internal.html (CSS vars and the logo drop-shadow rgba).
+     Version label v 1.5.1 in top bar and footer. NOT published/merged.
+
   2026-11-07 nightly, branch nightly/2026-11-07-hub (PR stacked on
   PR #4 branch nightly/2026-10-29-hub-internal), hub v1.4 -> v1.5:
   * Tonight's live audit of gershon.ai (still the OLD page, nothing
