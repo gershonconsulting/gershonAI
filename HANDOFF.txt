@@ -56,6 +56,14 @@ The ai.gershon.ai PRODUCT (not in this repo):
 
 3. RECENTLY DONE  [DONE]
 ----------------------------------------------------------------
+  ✅ 2026-11-11 wave 3, branch nightly/2026-11-11-hub-brand-red-v2 (PR #8): index.html
+     red done with plain git: #CC3333 -> #FE1B04, #a8281f -> #d11200,
+     rgba(204,51,51 -> rgba(254,27,4 (3 substitutions). Base64 logo blob verified
+     byte-identical (sha256 before/after). Both pages parse. Version label kept at v 1.5
+     (same as internal.html). Both pages now carry brand red.
+  ❌ Still open: old broken branch nightly/2026-11-11-hub-brand-red should be deleted
+     by Ariel. PR #8 still needs Olivier's OK to merge; gershon.ai not republished
+     (upload index.html + internal.html to Cloudflare Pages "gershon-ai" after merge).
   ✅ 2026-11-11 nightly, branch nightly/2026-11-11-hub-brand-red-v2: brand red
      #CC3333 -> #FE1B04 (dark #d11200, tint #fff5f5) in internal.html (CSS vars +
      logo drop-shadow rgba). Version label unchanged (v 1.5).
