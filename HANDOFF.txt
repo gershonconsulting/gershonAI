@@ -56,6 +56,15 @@ The ai.gershon.ai PRODUCT (not in this repo):
 
 3. RECENTLY DONE  [DONE]
 ----------------------------------------------------------------
+  ✅ 2026-11-11 nightly, branch nightly/2026-11-11-hub-brand-red-v2: brand red
+     #CC3333 -> #FE1B04 (dark #d11200, tint #fff5f5) in internal.html (CSS vars +
+     logo drop-shadow rgba). Version label unchanged (v 1.5).
+  ❌ index.html NOT done: it embeds a 15KB base64 PNG logo that cannot be re-sent
+     through push_files without corruption. Needs the same 4 substitutions
+     (#CC3333, #a8281f, rgba(204,51,51, and version v 1.5 -> v 1.5.1 in both
+     files) by an executor with real git (Ariel). Branch
+     nightly/2026-11-11-hub-brand-red is BROKEN (index.html truncated) - delete it.
+
   2026-11-07 nightly, branch nightly/2026-11-07-hub (PR stacked on
   PR #4 branch nightly/2026-10-29-hub-internal), hub v1.4 -> v1.5:
   * Tonight's live audit of gershon.ai (still the OLD page, nothing
