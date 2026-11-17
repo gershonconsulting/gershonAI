@@ -1,16 +1,18 @@
-# gershonAI hub — STATUS (updated 2026-11-16)
+# gershonAI hub — STATUS (updated 2026-11-17)
 
 Static hub for gershon.ai. Cloudflare Pages project `gershon-ai` (direct zip upload, no Git link).
-Deploy = zip of index.html + internal.html + platforms/ + mcp/ + apps/ uploaded in the Pages dashboard (see HANDOFF.txt).
+Deploy = zip of index.html + internal.html + agents/ + platforms/ + mcp/ + apps/ uploaded in the Pages dashboard (see HANDOFF.txt).
 
 ## Pages
 - `/` index.html — NEW home 2026-11-16: AI marketing agency teaser (gershonconsulting.com layout, Gershon.AI logo, 6 agents, early-access call)
+- `/agents/` agents/index.html — 2026-11-17 dedicated page for the 6 agents (what each does, deliverable, cadence, platform behind it, how they chain, what stays human, FAQ). Home #agents cards + nav link here.
 - `/platforms/` platforms/index.html — the former hub v1.5 (moved from /)
 - `/internal` internal.html — team platforms v1.5.1
 - `/mcp` mcp/index.html — Gershon MCP connector
 - `/apps` apps/index.html — v1.0, all 32 apps in 3 families: External (12), Internal (11), Independent (9); search + filter. Generator: tiles are hand-kept in the page.
 
 ## ✅ Done
+- ✅ 2026-11-17 /agents/ page + home links to it. Desktop 1280 / mobile 390: no overflow, no JS errors.
 - ✅ 2026-11-16 /apps page added (regrouped per Olivier 2026-11-16: 32 apps, 27 open, 5 coming soon; published to production). Desktop 1280 + mobile 390: no overflow, no JS errors. All 27 links checked with curl (200 or redirect to sign-in).
 
 ## ❌ Open
