@@ -215,7 +215,7 @@
 
 <section class="hero" style="padding-bottom:24px">
   <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Gershon.AI" class="hero-logo" />
-  <script>fetch("/").then(function(r){return r.text()}).then(function(t){var m=t.match(/<img src="(data:image\/png;base64,[^"]+)" alt="Gershon.AI" class="hero-logo"/);if(m)document.querySelectorAll("img.hero-logo,img[data-logo]").forEach(function(i){i.src=m[1];});}).catch(function(){});</script>
+  <script>fetch("/platforms/").then(function(r){return r.text()}).then(function(t){var m=t.match(/<img src="(data:image\/png;base64,[^"]+)" alt="Gershon.AI" class="hero-logo"/);if(m)document.querySelectorAll("img.hero-logo,img[data-logo]").forEach(function(i){i.src=m[1];});}).catch(function(){});</script>
   <script>document.querySelectorAll("img[data-logo]").forEach(function(i){i.src=document.querySelector(".hero-logo").src;});</script>
   <div class="hero-grid">
     <div>
@@ -224,7 +224,7 @@
     </div>
     <div class="hero-side">
       <p>The tools that run Gershon Consulting itself: accounts, money, tasks, spend, sales follow-up and client delivery. Each one asks you to sign in.</p>
-      <p style="margin-top:16px"><a href="/" style="color:inherit">← Back to all platforms</a></p>
+      <p style="margin-top:16px"><a href="/platforms/" style="color:inherit">← Back to all platforms</a></p>
     </div>
   </div>
 </section>

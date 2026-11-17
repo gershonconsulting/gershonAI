@@ -586,7 +586,7 @@
   <div class="small">© 2026 · <a href="/" style="color:inherit">gershon.ai</a> · <a href="/internal" style="color:inherit">Team</a> · Apps v 1.0</div>
 </footer>
 <script>
-fetch("/").then(function(r){return r.text()}).then(function(t){var m=t.match(/<img src="(data:image\/png;base64,[^"]+)" alt="Gershon.AI" class="hero-logo"/);if(m)document.querySelectorAll("img[data-logo]").forEach(function(i){i.src=m[1];});}).catch(function(){});
+fetch("/platforms/").then(function(r){return r.text()}).then(function(t){var m=t.match(/<img src="(data:image\/png;base64,[^"]+)" alt="Gershon.AI" class="hero-logo"/);if(m)document.querySelectorAll("img[data-logo]").forEach(function(i){i.src=m[1];});}).catch(function(){});
 (function(){
   var q=document.getElementById('q'),f='all',chips=document.querySelectorAll('.chip');
   function run(){
