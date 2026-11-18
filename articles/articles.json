@@ -1,0 +1,151 @@
+{
+ "version": "1.0",
+ "url": "https://gershon.ai/articles/",
+ "updated": "2026-11-18",
+ "articles": [
+  {
+   "slug": "why-we-built-gershon-ai",
+   "app": "Gershon.AI",
+   "title": "Why we built our own apps instead of buying more tools",
+   "summary": "Thirteen years of taking companies into the U.S. taught us where growth really leaks. So we built the apps to plug each leak, and turned them into a team of AI agents.",
+   "url": "https://gershon.ai/articles/why-we-built-gershon-ai/",
+   "app_url": "https://gershon.ai/apps/",
+   "read_minutes": 5
+  },
+  {
+   "slug": "icp",
+   "app": "ICP",
+   "title": "ICP: your U.S. market launch analysis in minutes, not months",
+   "summary": "Enter a website. Get a 12-point U.S. launch analysis: who buys, who you compete with, where to meet them and how to reach them.",
+   "url": "https://gershon.ai/articles/icp/",
+   "app_url": "https://icp.gershon.ai",
+   "read_minutes": 3
+  },
+  {
+   "slug": "events",
+   "app": "Events",
+   "title": "Events: stop flying to the wrong U.S. trade shows",
+   "summary": "From your ideal customer profile to a graded calendar of U.S. events, plus the exhibitors and CEOs worth meeting at each one.",
+   "url": "https://gershon.ai/articles/events/",
+   "app_url": "https://events.gershon.ai",
+   "read_minutes": 3
+  },
+  {
+   "slug": "publish",
+   "app": "Publish",
+   "title": "Publish: a LinkedIn presence your U.S. buyers recognise before you write to them",
+   "summary": "Create, approve, schedule and publish LinkedIn posts in your voice, with a client validation step before anything goes live.",
+   "url": "https://gershon.ai/articles/publish/",
+   "app_url": "https://publish.gershon.ai",
+   "read_minutes": 3
+  },
+  {
+   "slug": "social",
+   "app": "Social",
+   "title": "Social: know which content earns attention before you post more",
+   "summary": "LinkedIn analytics and social performance dashboards that track reach, engagement and the inbound signals that matter.",
+   "url": "https://gershon.ai/articles/social/",
+   "app_url": "https://social.gershon.ai",
+   "read_minutes": 3
+  },
+  {
+   "slug": "pulse",
+   "app": "Pulse",
+   "title": "Pulse: no hot lead waits in a LinkedIn inbox again",
+   "summary": "LinkedIn and Sales Navigator inbox triage. Every conversation sorted Red, Orange or Green, so the interested prospects get an answer first.",
+   "url": "https://gershon.ai/articles/pulse/",
+   "app_url": "https://pulse.gershoncrm.com",
+   "read_minutes": 3
+  },
+  {
+   "slug": "radar",
+   "app": "Radar",
+   "title": "Radar: the warm intro beats the cold message",
+   "summary": "Warm introductions, mapped: Sources, Bridges, Prospects. See who in your network can introduce you to each buyer.",
+   "url": "https://gershon.ai/articles/radar/",
+   "app_url": "https://radar.gershoncrm.com",
+   "read_minutes": 3
+  },
+  {
+   "slug": "sales",
+   "app": "Sales",
+   "title": "Sales: no deal dies of silence",
+   "summary": "A follow-up copilot on the sales pipeline. It surfaces every deal that needs a nudge and drafts the next touch.",
+   "url": "https://gershon.ai/articles/sales/",
+   "app_url": "https://sales.gershon.ai",
+   "read_minutes": 3
+  },
+  {
+   "slug": "client-report",
+   "app": "Client & Report",
+   "title": "Client and Report: proof, every week, on one page",
+   "summary": "A client portal with live dashboards and a one-pager generator that turns a month of campaign data into a client-ready report.",
+   "url": "https://gershon.ai/articles/client-report/",
+   "app_url": "https://client.gershoncrm.com",
+   "read_minutes": 3
+  },
+  {
+   "slug": "talking-points",
+   "app": "Talking Points",
+   "title": "Talking Points: walk into every meeting prepared",
+   "summary": "AI-assisted talking points and messaging guidance for sharper client and prospect conversations.",
+   "url": "https://gershon.ai/articles/talking-points/",
+   "app_url": "https://talkingpoints.gershon.ai",
+   "read_minutes": 3
+  },
+  {
+   "slug": "welcome",
+   "app": "Welcome",
+   "title": "Welcome: onboarding as a conversation, not a form",
+   "summary": "Conversational client onboarding that captures context, goals and requirements in one structured flow.",
+   "url": "https://gershon.ai/articles/welcome/",
+   "app_url": "https://welcome.gershon.ai",
+   "read_minutes": 2
+  },
+  {
+   "slug": "gauge",
+   "app": "Gauge",
+   "title": "Gauge: how good are you really with Sales Navigator?",
+   "summary": "Sign in with LinkedIn and get a score that shows how well you use Sales Navigator, and what to improve first.",
+   "url": "https://gershon.ai/articles/gauge/",
+   "app_url": "https://gauge.gershon.ai",
+   "read_minutes": 2
+  },
+  {
+   "slug": "tools",
+   "app": "Tools",
+   "title": "Tools: are you getting what you pay for from your growth stack?",
+   "summary": "One score for every growth tool you pay for: how well each outreach and AI platform is really being used.",
+   "url": "https://gershon.ai/articles/tools/",
+   "app_url": "https://tools.gershoncrm.com",
+   "read_minutes": 2
+  },
+  {
+   "slug": "linalysis",
+   "app": "Linalysis",
+   "title": "Linalysis: LinkedIn analytics that span years, not snapshots",
+   "summary": "Connections, profile views, Social Selling Index and company pages, tracked over the long term so you can see what really moves.",
+   "url": "https://gershon.ai/articles/linalysis/",
+   "app_url": "https://linalysis.net",
+   "read_minutes": 3
+  },
+  {
+   "slug": "nexashare",
+   "app": "NexaShare",
+   "title": "NexaShare: make sure the right people see what you publish",
+   "summary": "LinkedIn content amplification: get your team and network to repost and react to what you publish, at the moment it counts.",
+   "url": "https://gershon.ai/articles/nexashare/",
+   "app_url": "https://nexashare.com",
+   "read_minutes": 3
+  },
+  {
+   "slug": "gershon-mcp",
+   "app": "Gershon MCP",
+   "title": "Gershon MCP: your AI assistant, plugged into your U.S. campaign",
+   "summary": "One connector that lets Claude, ChatGPT or Gemini read Gershon's platforms through safe, read-only actions.",
+   "url": "https://gershon.ai/articles/gershon-mcp/",
+   "app_url": "https://gershon.ai/mcp",
+   "read_minutes": 2
+  }
+ ]
+}

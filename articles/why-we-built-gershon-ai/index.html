@@ -1,0 +1,73 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Why we built our own apps instead of buying more tools | Gershon.AI</title><meta name="description" content="Thirteen years of taking companies into the U.S. taught us where growth really leaks. So we built the apps to plug each leak, and turned them into a team of AI agents."/><link rel="canonical" href="https://gershon.ai/articles/why-we-built-gershon-ai/"/>
+<meta property="og:type" content="article"/><meta property="og:title" content="Why we built our own apps instead of buying more tools | Gershon.AI"/><meta property="og:description" content="Thirteen years of taking companies into the U.S. taught us where growth really leaks. So we built the apps to plug each leak, and turned them into a team of AI agents."/><meta property="og:url" content="https://gershon.ai/articles/why-we-built-gershon-ai/"/><meta property="og:site_name" content="Gershon.AI"/><meta name="twitter:card" content="summary"/>
+<link rel="icon" href="/assets/gershon-ai-logo.png"/><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/><style>
+:root{--red:#FE1B04;--red2:#d11200;--tint:#fff5f5;--ink:#1a1a1a;--char:#2a2a2a;--muted:#6b6b6b;--line:#e5e5e5;--paper:#fafaf7;--dark:#0b0f1a}
+*{box-sizing:border-box;margin:0;padding:0}html,body{overflow-x:hidden}
+body{font-family:'Inter Tight','Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.top{position:sticky;top:0;z-index:50;background:rgba(250,250,247,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top-in{max-width:1180px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;gap:24px}
+.top img{height:34px;display:block}.nav{display:flex;gap:22px;margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.nav a{text-decoration:none}.nav a.on,.nav a:hover{color:var(--red)}
+.pill{background:var(--red);color:#fff;border-radius:999px;padding:10px 18px;font-weight:600;font-size:14px;text-decoration:none;white-space:nowrap;display:inline-block}
+.pill:hover{background:var(--red2)}
+.eb{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--red);display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.eb::before{content:'';width:28px;height:2px;background:var(--red)}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:500;letter-spacing:-.02em}
+.hero{max-width:1180px;margin:0 auto;padding:72px 28px 40px}
+.hero h1{font-size:clamp(38px,5.4vw,68px);line-height:1.02;max-width:900px}.hero h1 em{color:var(--red)}
+.hero p{font-size:18px;color:var(--char);max-width:640px;margin-top:20px;line-height:1.6}
+.feat{max-width:1180px;margin:0 auto 24px;padding:0 28px}
+.feat a{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;background:var(--dark);color:#fff;border-radius:20px;padding:48px;text-decoration:none}
+.feat h2{font-size:clamp(28px,3.4vw,42px);line-height:1.08}.feat p{color:rgba(255,255,255,.8);font-size:17px;line-height:1.6}
+.feat .eb{color:#ff5a3c}.feat .eb::before{background:#ff5a3c}.feat .go{margin-top:22px;display:inline-block;color:#ff5a3c;font-weight:600}
+.grid{max-width:1180px;margin:0 auto;padding:0 28px 80px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px;text-decoration:none;transition:border-color .15s,transform .15s}
+.card:hover{border-color:var(--red);transform:translateY(-2px)}
+.card .tag{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--red);letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px}
+.card h3{font-size:22px;line-height:1.15;margin-bottom:10px}.card p{font-size:14.5px;color:#444;line-height:1.55;flex:1}
+.card .meta{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);margin-top:18px;padding-top:14px;border-top:1px dashed var(--line);display:flex;justify-content:space-between}
+.art{max-width:760px;margin:0 auto;padding:64px 28px 24px}
+.art h1{font-size:clamp(34px,4.6vw,54px);line-height:1.05}
+.dek{font-size:20px;color:var(--char);line-height:1.55;margin:20px 0 26px}
+.byline{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--muted);letter-spacing:.04em;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:8px 20px}
+.body{padding-top:28px}.body h2{font-size:28px;margin:36px 0 12px}
+.body p{font-size:18px;line-height:1.7;color:#222;margin-bottom:18px}
+.body ul{list-style:none;margin:6px 0 22px}.body li{position:relative;padding-left:24px;font-size:17.5px;line-height:1.6;margin-bottom:10px;color:#222}
+.body li::before{content:'';position:absolute;left:2px;top:11px;width:8px;height:8px;border-radius:50%;background:var(--red)}
+.body blockquote{font-family:Fraunces,Georgia,serif;font-size:28px;line-height:1.25;color:var(--red);border-left:3px solid var(--red);padding:4px 0 4px 22px;margin:30px 0}
+.app{max-width:760px;margin:16px auto 0;padding:0 28px}
+.app>div{background:var(--tint);border:1px solid #ffd9d3;border-radius:16px;padding:26px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.app b{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:22px;display:block}.app span{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--red2)}
+.ghost{border:1px solid var(--ink);border-radius:999px;padding:10px 18px;font-weight:600;font-size:14px;text-decoration:none}
+.more{max-width:1180px;margin:0 auto;padding:64px 28px 0}.more h2{font-size:30px;margin-bottom:20px}
+.more .grid{padding:0 0 40px}
+.cta{max-width:1180px;margin:0 auto;padding:0 28px 64px}
+.cta>div{background:var(--dark);color:#fff;border-radius:20px;padding:48px;display:grid;grid-template-columns:1.3fr 1fr;gap:32px;align-items:center}
+.cta h2{font-size:34px;line-height:1.1}.cta p{color:rgba(255,255,255,.75);font-size:14px;margin-top:10px}
+footer{border-top:1px solid var(--line);text-align:center;padding:32px;color:#888;font-size:13px}footer a{color:#888}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}.feat a,.cta div{grid-template-columns:1fr;padding:32px}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}.nav a.hide{display:none}.nav{gap:14px}.top img{height:28px}.top .pill{display:none}.body p{font-size:17px}}
+</style><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Why we built our own apps instead of buying more tools", "description": "Thirteen years of taking companies into the U.S. taught us where growth really leaks. So we built the apps to plug each leak, and turned them into a team of AI agents.", "author": {"@type": "Person", "name": "Olivier Attia"}, "publisher": {"@type": "Organization", "name": "Gershon Consulting", "url": "https://www.gershonconsulting.com"}, "datePublished": "2026-11-18", "mainEntityOfPage": "https://gershon.ai/articles/why-we-built-gershon-ai/"}</script></head><body>
+<header class="top"><div class="top-in"><a href="/"><img src="/assets/gershon-ai-logo.png" alt="Gershon.AI"/></a>
+<nav class="nav"><a href="/" class="hide">Home</a><a href="/agents/" class="hide">Agents</a><a href="/apps/">Apps</a><a href="/articles/" class="on">Articles</a></nav>
+<a class="pill" href="https://www.gershonconsulting.com/calendar">Book a call</a></div></header><main><article class="art"><div class="eb">Gershon.AI · Our story</div><h1>Why we built our own apps instead of buying more tools</h1><p class="dek">Thirteen years of taking companies into the U.S. taught us where growth really leaks. So we built the apps to plug each leak, and turned them into a team of AI agents.</p>
+<div class="byline"><span>Olivier Attia, Founder, Gershon Consulting</span><span>November 18, 2026</span><span>5 min read</span></div>
+<div class="body"><p>Since 2013, Gershon Consulting has had one job: give international companies a recurring sales pipeline in the United States. Not a strategy deck. Not a list of logos. Meetings with buyers, week after week.</p>
+<p>Doing that job for years, across industries, showed us the same pattern again and again. Companies rarely fail in the U.S. because their product is weak. They fail because the work between a good product and a signed U.S. customer is slow, manual and invisible. Nobody sees it slipping until the quarter is gone.</p>
+<h2>The leaks we kept seeing</h2>
+<ul><li>Teams targeted the wrong buyers because nobody had mapped the U.S. market properly.</li><li>Travel budgets went to trade shows where the real decision-makers never walked the floor.</li><li>LinkedIn profiles stayed silent, so the first message to a prospect arrived cold.</li><li>Hot replies sat for days in a crowded inbox while the prospect moved on.</li><li>Warm introductions existed inside the network, but nobody knew who could make them.</li><li>Deals died of silence after a good first meeting.</li><li>Clients could not see, in one page, what their budget had actually produced.</li></ul>
+<p>Every one of those leaks costs a deal. Most of them were being handled with spreadsheets, sticky notes and good intentions. The off-the-shelf tools we tried each solved a slice, but none of them was built around the one outcome we are paid for: U.S. meetings.</p>
+<h2>So we built the apps ourselves</h2>
+<p>One app per leak. ICP maps who to sell to. Events grades which U.S. shows are worth the trip. Publish and Social build a LinkedIn presence buyers recognise. Pulse and Radar start and triage the conversations. Sales keeps every deal moving. Client and Report prove the results. Around them sit the helpers: Talking Points to prepare every meeting, Welcome to onboard without forms, Gauge and Tools to check that the tools you pay for are really used.</p>
+<p>We use every one of these apps every day on real client campaigns. That is the point. They were not designed in a lab; they were designed by people who had to deliver meetings on Monday morning.</p>
+<blockquote>AI does the volume. People own the judgment.</blockquote>
+<h2>Why that makes them powerful</h2>
+<ul><li>They share one goal. Each app hands its work to the next one, so the campaign gets sharper every week instead of starting over.</li><li>They run constantly. The agents behind them work around the clock, while our strategists in New York set direction and approve what goes out.</li><li>They are measurable. Every action leaves evidence, so results are shown, not claimed.</li></ul>
+<p>Today the apps work together as Gershon.AI: six AI agents, a Strategist, an Event Scout, a Writer, an SDR, a Closer&#x27;s Copilot and an Analyst, steered by our team. The articles in this series explain each app, the problem that made us build it and what it changes for a company entering the U.S.</p>
+<p>If the U.S. is your next growth market, the fastest way to see what the apps can do for you is a 20-minute call with our team.</p></div></article>
+<section class="app"><div><div><b>Gershon.AI</b><span>gershon.ai/apps</span></div><div style="display:flex;gap:10px;flex-wrap:wrap"><a class="pill" href="https://gershon.ai/apps/">Open Gershon.AI ↗</a><a class="ghost" href="https://www.gershonconsulting.com/calendar">Talk to us</a></div></div></section>
+<section class="more"><h2>More from the series</h2><div class="grid"><a class="card" href="/articles/icp/"><div class="tag">ICP · The Strategist</div><h3>ICP: your U.S. market launch analysis in minutes, not months</h3><p>Enter a website. Get a 12-point U.S. launch analysis: who buys, who you compete with, where to meet them and how to reach them.</p><div class="meta"><span>3 min read</span><span>Read →</span></div></a><a class="card" href="/articles/events/"><div class="tag">Events · The Event Scout</div><h3>Events: stop flying to the wrong U.S. trade shows</h3><p>From your ideal customer profile to a graded calendar of U.S. events, plus the exhibitors and CEOs worth meeting at each one.</p><div class="meta"><span>3 min read</span><span>Read →</span></div></a><a class="card" href="/articles/publish/"><div class="tag">Publish · The Writer</div><h3>Publish: a LinkedIn presence your U.S. buyers recognise before you write to them</h3><p>Create, approve, schedule and publish LinkedIn posts in your voice, with a client validation step before anything goes live.</p><div class="meta"><span>3 min read</span><span>Read →</span></div></a></div><p style="padding-bottom:40px"><a href="/articles/" style="color:var(--red);font-weight:600;text-decoration:none">All articles →</a></p></section></main><section class="cta"><div><div><div class="eb" style="color:#ff5a3c">Your U.S. launch</div><h2>See what these apps can do for your U.S. pipeline.</h2></div>
+<div><a class="pill" href="https://www.gershonconsulting.com/calendar">Book a 20-minute call</a><p>With the Gershon team in New York.</p></div></div></section>
+<footer><a href="/">Gershon.AI</a> · by Gershon Consulting · Est. 2013 · New York · <a href="/articles/">Articles</a> v 1.0</footer></body></html>
