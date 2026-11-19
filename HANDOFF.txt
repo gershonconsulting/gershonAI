@@ -56,6 +56,9 @@ The ai.gershon.ai PRODUCT (not in this repo):
 
 3. RECENTLY DONE  [DONE]
 ----------------------------------------------------------------
+  ✅ 2026-11-19 nightly hub v1.5.3: gershonCRM.com -> gershoncrm.com in hrefs/labels (internal, apps). platforms/index.html NOT done (embeds a ~15KB base64 PNG logo the MCP connector cannot re-send): needs real git - same sed, plus label crm.gershonCRM.com -> crm.gershon.ai.
+  ❌ v1.5.3 NEEDS A CLOUDFLARE PAGES UPLOAD (direct-upload project gershon-ai, merges do not deploy).
+
   ✅ 2026-11-11 wave 3, branch nightly/2026-11-11-hub-brand-red-v2 (PR #8): index.html
      red done with plain git: #CC3333 -> #FE1B04, #a8281f -> #d11200,
      rgba(204,51,51 -> rgba(254,27,4 (3 substitutions). Base64 logo blob verified
