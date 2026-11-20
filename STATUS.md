@@ -7,7 +7,7 @@ Deploy = zip of index.html + internal.html + agents/ + platforms/ + mcp/ + apps/
 - `/` index.html — NEW home 2026-11-16: AI marketing agency teaser (gershonconsulting.com layout, Gershon.AI logo, 6 agents, early-access call)
 - `/agents/` agents/index.html — 2026-11-17 dedicated page for the 6 agents (what each does, deliverable, cadence, platform behind it, how they chain, what stays human, FAQ). Home #agents cards + nav link here.
 - `/platforms/` platforms/index.html — the former hub v1.5 (moved from /)
-- `/internal` internal.html — team platforms v1.5.4
+- `/internal` internal.html — team platforms v1.5.5
 - `/mcp` mcp/index.html — Gershon MCP connector
 - `/articles/` articles/ — v1.0 2026-11-18: 16 articles (why we built each app), index, articles.json feed. Source + generator in _build/ (edit _build/articles_content.py, run python3 _build/build_articles.py). Logo file /assets/gershon-ai-logo.png. _build/ is NOT part of the deploy zip.
 - `/apps` apps/index.html — v1.0, all 32 apps in 3 families: External (12), Internal (11), Independent (9); search + filter. Generator: tiles are hand-kept in the page.
@@ -18,6 +18,7 @@ Deploy = zip of index.html + internal.html + agents/ + platforms/ + mcp/ + apps/
 - ✅ 2026-11-16 /apps page added (regrouped per Olivier 2026-11-16: 32 apps, 27 open, 5 coming soon; published to production). Desktop 1280 + mobile 390: no overflow, no JS errors. All 27 links checked with curl (200 or redirect to sign-in).
 
 ## ❌ Open
+- ❌ 2026-11-20 v1.5.5 (platforms tile counters renumbered 01-18 / 18) merged, not live: needs a Pages zip upload (direct upload).
 - ❌ 2026-11-20 v1.5.3 + v1.5.4 (platforms page fixed: logo in /assets, gershoncrm.com lowercase, crm.gershon.ai) merged but need a Pages zip upload.
 - ❌ 2026-11-18 Articles merged but gershon.ai needs the zip re-uploaded (add articles/ + assets/ to the zip).
 - ❌ Link gershon.ai/articles (and each app's own article) from every app's menu/footer.
