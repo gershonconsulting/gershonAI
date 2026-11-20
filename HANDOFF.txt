@@ -58,6 +58,7 @@ The ai.gershon.ai PRODUCT (not in this repo):
 ----------------------------------------------------------------
   ✅ 2026-11-19 nightly hub v1.5.3: gershonCRM.com -> gershoncrm.com in hrefs/labels (internal, apps). platforms/index.html NOT done (embeds a ~15KB base64 PNG logo the MCP connector cannot re-send): needs real git - same sed, plus label crm.gershonCRM.com -> crm.gershon.ai.
   ❌ v1.5.3 NEEDS A CLOUDFLARE PAGES UPLOAD (direct-upload project gershon-ai, merges do not deploy).
+  ✅ 2026-11-20 nightly hub v1.5.4: platforms/index.html logo now /assets/gershon-ai-logo.png (base64 removed, file small + editable); labels lower-case gershoncrm.com; crm.gershonCRM.com -> crm.gershon.ai; internal + apps load logo from /assets (no more fetch of /platforms/). Merged, NOT live until Pages zip upload (v1.5.3+v1.5.4 pending).
 
   ✅ 2026-11-11 wave 3, branch nightly/2026-11-11-hub-brand-red-v2 (PR #8): index.html
      red done with plain git: #CC3333 -> #FE1B04, #a8281f -> #d11200,

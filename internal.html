@@ -204,10 +204,10 @@
 
 <header class="topbar">
   <div class="topbar-inner">
-    <a href="/" class="wordmark"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-logo alt="Gershon.AI" /></a>
+    <a href="/" class="wordmark"><img src="/assets/gershon-ai-logo.png" data-logo alt="Gershon.AI" /></a>
     <div class="meta">
       <span><span class="pulse"></span>System online</span>
-      <span>v 1.5.3 — 2026</span>
+      <span>v 1.5.4 — 2026</span>
       <span>Managed by O. Attia</span>
     </div>
   </div>
@@ -215,8 +215,7 @@
 
 <section class="hero" style="padding-bottom:24px">
   <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Gershon.AI" class="hero-logo" />
-  <script>fetch("/platforms/").then(function(r){return r.text()}).then(function(t){var m=t.match(/<img src="(data:image\/png;base64,[^"]+)" alt="Gershon.AI" class="hero-logo"/);if(m)document.querySelectorAll("img.hero-logo,img[data-logo]").forEach(function(i){i.src=m[1];});}).catch(function(){});</script>
-  <script>document.querySelectorAll("img[data-logo]").forEach(function(i){i.src=document.querySelector(".hero-logo").src;});</script>
+  <script>document.querySelectorAll("img.hero-logo,img[data-logo]").forEach(function(i){i.src="/assets/gershon-ai-logo.png";});</script>
   <div class="hero-grid">
     <div>
       <div class="hero-eyebrow">Internal · Team only</div>
@@ -361,7 +360,7 @@
 
 <footer>
   <div class="credit"><strong>Gershon Consulting</strong> — internal platforms. <em>Est. 2013.</em></div>
-  <div class="small">© 2026 · Delaware LLC · <a href="/" style="color:inherit">gershon.ai</a> · <a href="/articles/" style="color:inherit">Articles</a> · v 1.5.3</div>
+  <div class="small">© 2026 · Delaware LLC · <a href="/" style="color:inherit">gershon.ai</a> · <a href="/articles/" style="color:inherit">Articles</a> · v 1.5.4</div>
 </footer>
 </body>
 </html>
