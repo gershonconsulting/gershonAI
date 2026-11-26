@@ -1,7 +1,7 @@
 {
- "version": "1.0",
+ "version": "1.1",
  "url": "https://gershon.ai/articles/",
- "updated": "2026-11-18",
+ "updated": "2026-11-26",
  "articles": [
   {
    "slug": "why-we-built-gershon-ai",
@@ -11,6 +11,16 @@
    "url": "https://gershon.ai/articles/why-we-built-gershon-ai/",
    "app_url": "https://gershon.ai/apps/",
    "read_minutes": 5
+  },
+  {
+   "slug": "if-you-pay-peanuts-you-get-monkeys",
+   "app": "Perspective",
+   "title": "If you pay peanuts, you get monkeys!",
+   "summary": "Commission-only sounds free. It rarely is. Why a low upfront cost and good value are not the same thing in a service business.",
+   "url": "https://gershon.ai/articles/if-you-pay-peanuts-you-get-monkeys/",
+   "app_url": "https://www.gershonconsulting.com/calendar",
+   "read_minutes": 3,
+   "audio_url": "https://gershon.ai/articles/if-you-pay-peanuts-you-get-monkeys/podcast.mp3"
   },
   {
    "slug": "icp",

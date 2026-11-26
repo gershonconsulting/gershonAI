@@ -8,7 +8,7 @@ from articles_content import ARTICLES, DATE, AUTHOR
 ROOT = os.path.join(os.path.dirname(__file__), "..")
 OUT = os.path.join(ROOT, "articles")
 BASE = "https://gershon.ai"
-VERSION = "1.0"
+VERSION = "1.1"
 e = html.escape
 
 CSS = """
@@ -46,6 +46,7 @@ h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:500;letter-spacing:-.02e
 .body p{font-size:18px;line-height:1.7;color:#222;margin-bottom:18px}
 .body ul{list-style:none;margin:6px 0 22px}.body li{position:relative;padding-left:24px;font-size:17.5px;line-height:1.6;margin-bottom:10px;color:#222}
 .body li::before{content:'';position:absolute;left:2px;top:11px;width:8px;height:8px;border-radius:50%;background:var(--red)}
+.pod{margin:22px 0 4px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px}.pod .eb{margin-bottom:10px}.pod audio{width:100%}.pod small{display:block;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);margin-top:8px}
 .body blockquote{font-family:Fraunces,Georgia,serif;font-size:28px;line-height:1.25;color:var(--red);border-left:3px solid var(--red);padding:4px 0 4px 22px;margin:30px 0}
 .app{max-width:760px;margin:16px auto 0;padding:0 28px}
 .app>div{background:var(--tint);border:1px solid #ffd9d3;border-radius:16px;padding:26px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
@@ -80,7 +81,7 @@ FOOT = f"""<section class="cta"><div><div><div class="eb" style="color:#ff5a3c">
 
 
 def card(a):
-    return f"""<a class="card" href="/articles/{a['slug']}/"><div class="tag">{e(a['app'])} · {e(a['tag'])}</div><h3>{e(a['title'])}</h3><p>{e(a['dek'])}</p><div class="meta"><span>{a['read']} min read</span><span>Read →</span></div></a>"""
+    return f"""<a class="card" href="/articles/{a['slug']}/"><div class="tag">{e(a['app'])} · {e(a['tag'])}</div><h3>{e(a['title'])}</h3><p>{e(a['dek'])}</p><div class="meta"><span>{a['read']} min read{' · podcast' if a.get('audio') else ''}</span><span>Read →</span></div></a>"""
 
 
 def render_body(blocks):
@@ -102,14 +103,22 @@ def article_page(a, others):
     ld = json.dumps({"@context": "https://schema.org", "@type": "Article", "headline": a["title"], "description": a["dek"],
                      "author": {"@type": "Person", "name": "Olivier Attia"},
                      "publisher": {"@type": "Organization", "name": "Gershon Consulting", "url": "https://www.gershonconsulting.com"},
-                     "datePublished": "2026-11-18", "mainEntityOfPage": url})
+                     "datePublished": a.get("iso", "2026-11-18"), "mainEntityOfPage": url})
+    if a.get("audio"):
+        ld = ld[:-1] + ', "audio": ' + json.dumps({"@type": "AudioObject", "contentUrl": BASE + a["audio"], "encodingFormat": "audio/mpeg", "name": a["title"] + " (podcast)"}) + "}"
     app_label = a["url"].replace("https://", "").rstrip("/")
+    pod = ""
+    if a.get("audio"):
+        pod = f"""<div class="pod"><div class="eb">Listen · podcast version</div><audio controls preload="none" src="{a['audio']}"></audio><small>{e(a.get('audio_len',''))} · <a href="{a['audio']}" download>Download MP3</a></small></div>"""
+    src = f"""<p style="font-size:15px;color:var(--muted)">First published on <a href="{a['linkedin']}" style="color:var(--red)">LinkedIn</a>. Join the conversation there.</p>""" if a.get("linkedin") else ""
+    box_btn = f'<a class="pill" href="{a["url"]}">Open {e(a["app"])} ↗</a>' if not a.get("linkedin") else f'<a class="pill" href="{a["linkedin"]}">Comment on LinkedIn ↗</a>'
+    box_label = app_label if not a.get("linkedin") else "gershonconsulting.com"
     more = "".join(card(o) for o in others)
     return (head(f"{a['title']} | Gershon.AI", a["dek"], url, f'<script type="application/ld+json">{ld}</script>') +
             f"""<main><article class="art"><div class="eb">{e(a['app'])} · {e(a['tag'])}</div><h1>{e(a['title'])}</h1><p class="dek">{e(a['dek'])}</p>
-<div class="byline"><span>{e(AUTHOR)}</span><span>{DATE}</span><span>{a['read']} min read</span></div>
-<div class="body">{render_body(a['body'])}</div></article>
-<section class="app"><div><div><b>{e(a['app'])}</b><span>{e(app_label)}</span></div><div style="display:flex;gap:10px;flex-wrap:wrap"><a class="pill" href="{a['url']}">Open {e(a['app'])} ↗</a><a class="ghost" href="https://www.gershonconsulting.com/calendar">Talk to us</a></div></div></section>
+<div class="byline"><span>{e(AUTHOR)}</span><span>{a.get('date', DATE)}</span><span>{a['read']} min read</span></div>{pod}
+<div class="body">{render_body(a['body'])}{src}</div></article>
+<section class="app"><div><div><b>{e(a['app'])}</b><span>{e(box_label)}</span></div><div style="display:flex;gap:10px;flex-wrap:wrap">{box_btn}<a class="ghost" href="https://www.gershonconsulting.com/calendar">Talk to us</a></div></div></section>
 <section class="more"><h2>More from the series</h2><div class="grid">{more}</div><p style="padding-bottom:40px"><a href="/articles/" style="color:var(--red);font-weight:600;text-decoration:none">All articles →</a></p></section></main>""" + FOOT)
 
 
@@ -132,9 +141,9 @@ def main():
         others = [ARTICLES[(i + k) % len(ARTICLES)] for k in (1, 2, 3)]
         d = os.path.join(OUT, a["slug"]); os.makedirs(d, exist_ok=True)
         open(os.path.join(d, "index.html"), "w").write(article_page(a, others))
-    feed = {"version": VERSION, "url": f"{BASE}/articles/", "updated": "2026-11-18",
+    feed = {"version": VERSION, "url": f"{BASE}/articles/", "updated": "2026-11-26",
             "articles": [{"slug": a["slug"], "app": a["app"], "title": a["title"], "summary": a["dek"],
-                          "url": f"{BASE}/articles/{a['slug']}/", "app_url": a["url"], "read_minutes": a["read"]} for a in ARTICLES]}
+                          "url": f"{BASE}/articles/{a['slug']}/", "app_url": a["url"], "read_minutes": a["read"], **({"audio_url": BASE + a["audio"]} if a.get("audio") else {})} for a in ARTICLES]}
     open(os.path.join(OUT, "articles.json"), "w").write(json.dumps(feed, indent=1))
     print(f"built {len(ARTICLES)} articles + index + feed")
 
