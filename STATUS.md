@@ -1,4 +1,4 @@
-# gershonAI hub — STATUS (updated 2026-11-20)
+# gershonAI hub — STATUS (updated 2026-11-26)
 
 Static hub for gershon.ai. Cloudflare Pages project `gershon-ai` (direct zip upload, no Git link).
 Deploy = zip of index.html + internal.html + agents/ + platforms/ + mcp/ + apps/ + articles/ + assets/ uploaded in the Pages dashboard (see HANDOFF.txt).
@@ -13,16 +13,17 @@ Deploy = zip of index.html + internal.html + agents/ + platforms/ + mcp/ + apps/
 - `/apps` apps/index.html — v1.0, all 32 apps in 3 families: External (12), Internal (11), Independent (9); search + filter. Generator: tiles are hand-kept in the page.
 
 ## ✅ Done
+- ✅ 2026-11-26 Articles v1.1: LinkedIn article "If you pay peanuts, you get monkeys!" at /articles/if-you-pay-peanuts-you-get-monkeys/ with podcast MP3 (Kokoro TTS, 2 hosts, 4:28). PR #20. DEPLOYED to production (Pages zip upload from branch deploy-zip via dashboard). This upload also put v1.5.3–1.5.5 and /articles live.
 - ✅ 2026-11-18 /articles/ section + Articles link on home, agents, apps, mcp, platforms, internal. Desktop 1280 / mobile 390: no overflow, no JS errors.
 - ✅ 2026-11-17 /agents/ page + home links to it. Desktop 1280 / mobile 390: no overflow, no JS errors.
 - ✅ 2026-11-16 /apps page added (regrouped per Olivier 2026-11-16: 32 apps, 27 open, 5 coming soon; published to production). Desktop 1280 + mobile 390: no overflow, no JS errors. All 27 links checked with curl (200 or redirect to sign-in).
 
 ## ❌ Open
-- ❌ 2026-11-20 v1.5.5 (platforms tile counters renumbered 01-18 / 18) merged, not live: needs a Pages zip upload (direct upload).
-- ❌ 2026-11-20 v1.5.3 + v1.5.4 (platforms page fixed: logo in /assets, gershoncrm.com lowercase, crm.gershon.ai) merged but need a Pages zip upload.
-- ❌ 2026-11-18 Articles merged but gershon.ai needs the zip re-uploaded (add articles/ + assets/ to the zip).
 - ❌ Link gershon.ai/articles (and each app's own article) from every app's menu/footer.
 - ✅ 2026-11-16 New home page published on Olivier's "publish the sample". /internal and /apps (and /platforms) now load /assets/gershon-ai-logo.png (v1.5.4).
 - ❌ Home hero uses a drawn skyline, not the gershonconsulting.com photos; the agents box is descriptive, not live data yet.
 - ❌ No DNS yet: crm.gershoncrm.com, ai.gershon.ai, roi.gershoncrm.com, e2.gershoncrm.com, mcp.gershon.ai (shown as Coming soon).
 - ❌ enricherpro.com / qrnetworking.com redirect to dead novita sandboxes; xpensepro.com redirects to a genspark space.
+
+## Deploy route (works, no human)
+zip index.html internal.html agents platforms mcp apps articles assets → push as gershon-ai-site.zip to branch deploy-zip → in dash.cloudflare.com Pages gershon-ai > Create deployment, fetch raw.githubusercontent.com/.../deploy-zip/gershon-ai-site.zip in page JS, inject into the .zip file input via DataTransfer → Save and deploy.
